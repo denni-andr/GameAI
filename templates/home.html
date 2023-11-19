@@ -40,11 +40,22 @@
         </blockquote>
     </div>
 
-    <div style="text-align: center;margin-top: 30px;">
-        <a class='btn btn-primary btn-large' href="{{ url_for('index')}}">
-            <h3>Start Playing</h3>
-        </a>
-    </div>
+    <form method='post' style='text-align: center;margin-top: 30px;'>
+        <div style='width:200px;margin:0 auto;' class='form-floating'>
+            <select style='height: 65px;' name='diff' id='diff' class="form-select form-select-lg mb-3"
+                aria-label="select difficulty">
+                <option selected value="easy">Easy</option>
+                <option value="med">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <label for="diff">Difficulty Level</label>
+        </div>
+        <div>
+            <button style='margin-top: 25px;' class='btn btn-primary btn-large'>
+                <h3>Start Playing</h3>
+            </button>
+        </div>
+    </form>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

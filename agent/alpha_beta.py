@@ -3,13 +3,17 @@ import copy
 import random
 
 
-def alpha_beta(b, depth=2):
+def alpha_beta(b, depth=2, diff=None):
     alpha = -300
     beta = 300
     moves = b.valid_move()
 
-    if len(moves) <= 10:
-        depth = 5
+    if diff == "easy":
+        depth = 2
+    if diff == "med":
+        depth = 4
+    if diff == "hard":
+        depth = 6
 
     random.shuffle(moves)
     player = b.player
